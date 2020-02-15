@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/recipe"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedRecip.name}}</ion-title>
+    <ion-button fill="clear" (click)="removeRecipe()" slot="end" color="danger">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-img [src]="loadedRecip.image"></ion-img>
+      </ion-col>
+      <ion-list>
+        <ion-item *ngFor="let tag of loadedRecip.tag">
+          <ion-label>{{ tag }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

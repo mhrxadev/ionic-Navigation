@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+  <app-item-recipe *ngFor="let course of recipes" [singleCourse]="course"></app-item-recipe>
+</ion-list>
+
+
+
+</ion-content>
